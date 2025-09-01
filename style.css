@@ -2205,8 +2205,8 @@ footer .icons-container .right .reserved button:hover {
   }
 
   footer .icons-container .left .logo img {
-    width: 150px;
-    height: 100px;
+    width: 250px;
+    height: 180px;
     margin-bottom: 0;
   }
 
@@ -2313,6 +2313,7 @@ footer .icons-container .right .reserved button:hover {
     font-size: 10px;
     text-align: center;
     margin: 0;
+    padding: 0;
   }
 
   footer .icons-container .right .social-media a i {
