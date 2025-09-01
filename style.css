@@ -2291,9 +2291,8 @@ footer .icons-container .right .reserved button:hover {
   }
 
   footer .icons-container .left .logo img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 0.5rem;
+    width: 250px;
+    height: 100px;
   }
 
   footer .icons-container .right {
@@ -2304,20 +2303,20 @@ footer .icons-container .right .reserved button:hover {
   }
 
   footer .icons-container .right .social-media {
-    justify-content: center;
-    margin-top: 1rem;
+    justify-content: end;
+    margin-bottom: 5px;
     width: 100%;
     gap: 5%;
   }
 
   footer .icons-container .right .social-media h2 {
-    font-size: 1rem;
+    font-size: 10px;
     text-align: center;
-    margin-bottom: 1rem;
+    margin: 0;
   }
 
   footer .icons-container .right .social-media a i {
-    font-size: 1.3rem;
+    font-size: 15px;
     margin: 0 5px;
   }
 
@@ -2326,7 +2325,7 @@ footer .icons-container .right .reserved button:hover {
     gap: 12px;
     padding-top: 8px;
     border-top: hsla(44, 80%, 66%, 0.882) solid 1px;
-    justify-content: center;
+    justify-content: end;
     gap: 10%;
   }
 
