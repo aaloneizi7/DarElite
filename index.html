@@ -2,12 +2,18 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
-    
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"
+    />
+
     <title>DarElite-RealEstate</title>
-    <link rel="shortcut icon" href="visuals/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="visuals/favicon.ico" type="image/x-icon" />
     <!-- services icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <!-- Two Icons Links -->
     <link
       rel="stylesheet"
@@ -31,7 +37,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=WDXL+Lubrifont+TC&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="main" class="lang">
@@ -44,81 +50,180 @@
         <div class="overlay"></div>
         <div class="page1-content">
           <header>
-          <div class="left">
-            <div class="logo">
-              <img src="visuals/DarElite_Logo_HighRes.png" alt="Company_Logo" />
+            <div class="left">
+              <div class="logo">
+                <img
+                  src="visuals/DarElite_Logo_HighRes.png"
+                  alt="Company_Logo"
+                />
+              </div>
+              <nav>
+                <a href="#page1" class="lang" data-en="Home" data-ar="الرئيسية"
+                  >Home</a
+                >
+                <a
+                  href="#page3"
+                  class="lang"
+                  data-en="Our Listings"
+                  data-ar="العقارات"
+                  >Our Listings</a
+                >
+                <a
+                  href="#page5"
+                  class="lang"
+                  data-en="Contact us"
+                  data-ar="تواصل معنا"
+                  >Contact us</a
+                >
+                <button
+                  id="call-button"
+                  onclick="showContactCard()"
+                  class="lang"
+                  data-en="Speak with Us"
+                  data-ar="تحدث معنا"
+                >
+                  Speak with Us
+                </button>
+                <a
+                  href="https://darelite.zohobookings.com/#/darelite"
+                  target="_blank"
+                  class="lang"
+                  data-en="Request a Consultation"
+                  data-ar="احصل على استشارة"
+                  >Request a Consultation</a
+                >
+              </nav>
             </div>
-            <nav>
-              <a href="#page1" class="lang" data-en="Home" data-ar="الرئيسية">Home</a>
-              <a href="#page3" class="lang" data-en="Our Listings" data-ar="العقارات">Our Listings</a>
-              <a href="#page5" class="lang" data-en="Contact us" data-ar="تواصل معنا">Contact us</a>
-              <button id="call-button" onclick="showContactCard()" class="lang" data-en="Speak with Us" data-ar="تحدث معنا">Speak with Us</button>
-              <a href="https://darelite.zohobookings.com/#/darelite" target="_blank" class="lang" data-en="Request a Consultation" data-ar="احصل على استشارة">Request a Consultation</a>
-            </nav>
-          </div>
-          <div class="right">
-            <button class="lang" data-en="EN" data-ar="العربية">EN</button>
-          </div>
+            <div class="right">
+              <button class="lang" data-en="EN" data-ar="العربية">EN</button>
+            </div>
           </header>
           <div id="call-overlay" onclick="closeContactCard()"></div>
           <div id="contact-card">
-            <h3 class="lang" data-en="Would you like to get in touch with us directly ?" data-ar="هل تود التواصل معنا مباشرة؟">
+            <h3
+              class="lang"
+              data-en="Would you like to get in touch with us directly ?"
+              data-ar="هل تود التواصل معنا مباشرة؟"
+            >
               Would you like to get in touch with us directly ?
             </h3>
             <!-- Error Message -->
-            <p id="call-error" style="display: none; color: rgb(205, 26, 26); font-weight:700; font-size: 0.95rem; margin: 8% 0 0 0;"></p>
+            <p
+              id="call-error"
+              style="
+                display: none;
+                color: rgb(205, 26, 26);
+                font-weight: 700;
+                font-size: 0.95rem;
+                margin: 8% 0 0 0;
+              "
+            ></p>
             <div class="call-opts">
-              <a class="call-action lang" onclick="makeCall()" target="_blank" data-en="Call Us Now" data-ar="اتصل بنا الآن">Call Us Now</a>
-              <a href="https://wa.me/966597900000" target="_blank" class="call-action lang" data-en="Start a Chat" data-ar="ابدأ محادثة">Start a Chat</a>
+              <a
+                class="call-action lang"
+                onclick="makeCall()"
+                target="_blank"
+                data-en="Call Us Now"
+                data-ar="اتصل بنا الآن"
+                >Call Us Now</a
+              >
+              <a
+                href="https://wa.me/966597900000"
+                target="_blank"
+                class="call-action lang"
+                data-en="Start a Chat"
+                data-ar="ابدأ محادثة"
+                >Start a Chat</a
+              >
             </div>
           </div>
           <div class="container">
-              <div class="content lang"
-                data-en="Guided by a compelling vision and exceptional expertise, We transform aspirations into Reality & Reshaping the future and forging a legacy it will proudly proclaim."
-                data-ar="بفضل رؤيتنا الملهمة وخبرتنا الاستثنائية، نقوم بتحويل الطموحات إلى واقع، ونعيد تشكيل المستقبل، ونؤسس إرثًا نفخر به.">
-                Guided by a compelling vision and exceptional expertise, we
-                transform aspirations into reality & reshaping the future and
-                forging a legacy it will proudly proclaim.
-              </div>
+            <div
+              class="content lang"
+              data-en="Guided by a compelling vision and exceptional expertise, We transform aspirations into Reality & Reshaping the future and forging a legacy it will proudly proclaim."
+              data-ar="بفضل رؤيتنا الملهمة وخبرتنا الاستثنائية، نقوم بتحويل الطموحات إلى واقع، ونعيد تشكيل المستقبل، ونؤسس إرثًا نفخر به."
+            >
+              Guided by a compelling vision and exceptional expertise, we
+              transform aspirations into reality & reshaping the future and
+              forging a legacy it will proudly proclaim.
+            </div>
           </div>
-        </div>  
+        </div>
       </div>
       <div class="page2" id="page2">
         <div class="top">
-          <h1 class="lang" data-en="A Journey Defined by Excellence" data-ar="رحلة تتسم بالتميّز">
+          <h1
+            class="lang"
+            data-en="A Journey Defined by Excellence"
+            data-ar="رحلة تتسم بالتميّز"
+          >
             A Journey Defined by Excellence
           </h1>
-          <p class="lang"
-          data-en="And It Begins With You"
-          data-ar="وتبدأ معك أنت">
+          <p
+            class="lang"
+            data-en="And It Begins With You"
+            data-ar="وتبدأ معك أنت"
+          >
             And It Begins With You
           </p>
         </div>
         <div class="bottom">
           <div class="infocard">
-          <h2 class="lang" data-en="About Us" data-ar="من نحن">About Us</h2>
-          <p class="lang"
-            data-en="We are a leading real estate company headquartered in the Eastern Province of Saudi Arabia, backed by over a decade of experience in delivering end-to-end property solutions. Our expertise spans real estate marketing, development, and property management — all driven by an unwavering commitment to quality, professionalism, and transparency. We offer tailored services that cater to both individual clients and investors, empowering them to make informed, confident real estate decisions."
-            data-ar="نحن شركة رائدة في مجال العقارات مقرها في المنطقة الشرقية بالمملكة العربية السعودية، ونمتلك خبرة تزيد عن عقد من الزمان في تقديم حلول عقارية متكاملة. تشمل خبراتنا تسويق العقارات، التطوير، وإدارة الممتلكات، وكل ذلك ضمن التزام راسخ بالجودة والاحترافية والشفافية. نقدم خدمات مخصصة تلبي احتياجات العملاء الأفراد والمستثمرين، مما يمكنهم من اتخاذ قرارات عقارية واثقة ومدروسة. نركز على تحقيق قيمة طويلة الأمد والمساهمة في تطوير سوق عقارية أكثر كفاءة وثقة.">
-            We are a leading real estate company headquartered in the Eastern Province of Saudi Arabia, backed by over a decade of experience in delivering end-to-end property solutions. Our expertise spans real estate marketing, development, and property management — all driven by an unwavering commitment to quality, professionalism, and transparency. We offer tailored services that cater to both individual clients and investors, empowering them to make informed, confident real estate decisions.
-          </p>
-        </div>
-        <div class="infocard">
-          <h2 class="lang" data-en="Our Mission" data-ar="مهمتنا">Our Mission</h2>
-          <p class="lang"
-            data-en="Our mission is to lead the real estate market in the Eastern Province by delivering forward-thinking solutions that meet the evolving needs of clients and investors. Guided by the principles of Saudi Vision 2030, we are committed to building a sustainable and transparent real estate ecosystem. Through innovation, professionalism, and long-term partnerships, we aim to foster economic development, improve quality of life, and shape a more resilient future for the region’s property sector."
-            data-ar="مهمتنا أن نقود سوق العقارات في المنطقة الشرقية من خلال تقديم حلول مبتكرة تلبي احتياجات العملاء والمستثمرين المتغيرة. مسترشدين بمبادئ رؤية المملكة 2030، نلتزم ببناء نظام عقاري مستدام وشفاف. من خلال الابتكار والاحترافية والشراكات طويلة الأمد، نسعى لتعزيز التنمية الاقتصادية، وتحسين جودة الحياة، والمساهمة في تشكيل مستقبل أكثر مرونة لقطاع العقارات في المنطقة.">
-            Our mission is to lead the real estate market in the Eastern Province by delivering forward-thinking solutions that meet the evolving needs of clients and investors. Guided by the principles of Saudi Vision 2030, we are committed to building a sustainable and transparent real estate ecosystem. Through innovation, professionalism, and long-term partnerships, we aim to foster economic development, improve quality of life, and shape a more resilient future for the region’s property sector.
-          </p>
-        </div>
-        <div class="infocard">
-          <h2 class="lang" data-en="Our Vision" data-ar="رؤيتنا">Our Vision</h2>
-          <p class="lang"
-            data-en="We aim to set new standards in real estate by offering integrated, innovation-driven solutions that deliver lasting value and maximize client returns. Through expert property management and data-based marketing, we enhance asset performance and customer satisfaction. Our experienced team, supported by strategic alliances, is committed to empowering growth and excellence in the property sector. In alignment with Vision 2030, we strive to help build a smarter, more sustainable real estate landscape that meets both current and future demands."
-            data-ar="نهدف إلى وضع معايير جديدة في قطاع العقارات من خلال تقديم حلول متكاملة مدفوعة بالابتكار تحقق قيمة مستدامة وتزيد من عوائد العملاء. من خلال إدارة احترافية واستراتيجيات تسويق قائمة على البيانات، نعزز أداء الأصول ورضا العملاء. يلتزم فريقنا ذو الخبرة، والمدعوم بشراكات استراتيجية، بدعم النمو والتميز في القطاع العقاري. تماشياً مع رؤية 2030، نسعى لبناء مشهد عقاري أكثر ذكاءً واستدامةً يلبي احتياجات الحاضر والمستقبل.">
-            We aim to set new standards in real estate by offering integrated, innovation-driven solutions that deliver lasting value and maximize client returns. Through expert property management and data-based marketing, we enhance asset performance and customer satisfaction. Our experienced team, supported by strategic alliances, is committed to empowering growth and excellence in the property sector. In alignment with Vision 2030, we strive to help build a smarter, more sustainable real estate landscape that meets both current and future demands.
-          </p>
-        </div>
+            <h2 class="lang" data-en="About Us" data-ar="من نحن">About Us</h2>
+            <p
+              class="lang"
+              data-en="We are a leading real estate company headquartered in the Eastern Province of Saudi Arabia, backed by over a decade of experience in delivering end-to-end property solutions. Our expertise spans real estate marketing, development, and property management — all driven by an unwavering commitment to quality, professionalism, and transparency. We offer tailored services that cater to both individual clients and investors, empowering them to make informed, confident real estate decisions."
+              data-ar="نحن شركة رائدة في مجال العقارات مقرها في المنطقة الشرقية بالمملكة العربية السعودية، ونمتلك خبرة تزيد عن عقد من الزمان في تقديم حلول عقارية متكاملة. تشمل خبراتنا تسويق العقارات، التطوير، وإدارة الممتلكات، وكل ذلك ضمن التزام راسخ بالجودة والاحترافية والشفافية. نقدم خدمات مخصصة تلبي احتياجات العملاء الأفراد والمستثمرين، مما يمكنهم من اتخاذ قرارات عقارية واثقة ومدروسة. نركز على تحقيق قيمة طويلة الأمد والمساهمة في تطوير سوق عقارية أكثر كفاءة وثقة."
+            >
+              We are a leading real estate company headquartered in the Eastern
+              Province of Saudi Arabia, backed by over a decade of experience in
+              delivering end-to-end property solutions. Our expertise spans real
+              estate marketing, development, and property management — all
+              driven by an unwavering commitment to quality, professionalism,
+              and transparency. We offer tailored services that cater to both
+              individual clients and investors, empowering them to make
+              informed, confident real estate decisions.
+            </p>
+          </div>
+          <div class="infocard">
+            <h2 class="lang" data-en="Our Mission" data-ar="مهمتنا">
+              Our Mission
+            </h2>
+            <p
+              class="lang"
+              data-en="Our mission is to lead the real estate market in the Eastern Province by delivering forward-thinking solutions that meet the evolving needs of clients and investors. Guided by the principles of Saudi Vision 2030, we are committed to building a sustainable and transparent real estate ecosystem. Through innovation, professionalism, and long-term partnerships, we aim to foster economic development, improve quality of life, and shape a more resilient future for the region’s property sector."
+              data-ar="مهمتنا أن نقود سوق العقارات في المنطقة الشرقية من خلال تقديم حلول مبتكرة تلبي احتياجات العملاء والمستثمرين المتغيرة. مسترشدين بمبادئ رؤية المملكة 2030، نلتزم ببناء نظام عقاري مستدام وشفاف. من خلال الابتكار والاحترافية والشراكات طويلة الأمد، نسعى لتعزيز التنمية الاقتصادية، وتحسين جودة الحياة، والمساهمة في تشكيل مستقبل أكثر مرونة لقطاع العقارات في المنطقة."
+            >
+              Our mission is to lead the real estate market in the Eastern
+              Province by delivering forward-thinking solutions that meet the
+              evolving needs of clients and investors. Guided by the principles
+              of Saudi Vision 2030, we are committed to building a sustainable
+              and transparent real estate ecosystem. Through innovation,
+              professionalism, and long-term partnerships, we aim to foster
+              economic development, improve quality of life, and shape a more
+              resilient future for the region’s property sector.
+            </p>
+          </div>
+          <div class="infocard">
+            <h2 class="lang" data-en="Our Vision" data-ar="رؤيتنا">
+              Our Vision
+            </h2>
+            <p
+              class="lang"
+              data-en="We aim to set new standards in real estate by offering integrated, innovation-driven solutions that deliver lasting value and maximize client returns. Through expert property management and data-based marketing, we enhance asset performance and customer satisfaction. Our experienced team, supported by strategic alliances, is committed to empowering growth and excellence in the property sector. In alignment with Vision 2030, we strive to help build a smarter, more sustainable real estate landscape that meets both current and future demands."
+              data-ar="نهدف إلى وضع معايير جديدة في قطاع العقارات من خلال تقديم حلول متكاملة مدفوعة بالابتكار تحقق قيمة مستدامة وتزيد من عوائد العملاء. من خلال إدارة احترافية واستراتيجيات تسويق قائمة على البيانات، نعزز أداء الأصول ورضا العملاء. يلتزم فريقنا ذو الخبرة، والمدعوم بشراكات استراتيجية، بدعم النمو والتميز في القطاع العقاري. تماشياً مع رؤية 2030، نسعى لبناء مشهد عقاري أكثر ذكاءً واستدامةً يلبي احتياجات الحاضر والمستقبل."
+            >
+              We aim to set new standards in real estate by offering integrated,
+              innovation-driven solutions that deliver lasting value and
+              maximize client returns. Through expert property management and
+              data-based marketing, we enhance asset performance and customer
+              satisfaction. Our experienced team, supported by strategic
+              alliances, is committed to empowering growth and excellence in the
+              property sector. In alignment with Vision 2030, we strive to help
+              build a smarter, more sustainable real estate landscape that meets
+              both current and future demands.
+            </p>
+          </div>
         </div>
       </div>
       <div class="page21" id="page21">
@@ -126,8 +231,13 @@
           <h1 class="lang" data-en="Our Services" data-ar="خدماتنا">
             Our Services
           </h1>
-          <p class="lang" data-en="Innovative and comprehensive real estate solutions for a smarter future" data-ar="حلول عقارية شاملة ومبتكرة لمستقبل أكثر ذكاءً">
-            Innovative and comprehensive real estate solutions for a smarter future
+          <p
+            class="lang"
+            data-en="Innovative and comprehensive real estate solutions for a smarter future"
+            data-ar="حلول عقارية شاملة ومبتكرة لمستقبل أكثر ذكاءً"
+          >
+            Innovative and comprehensive real estate solutions for a smarter
+            future
           </p>
         </div>
         <div class="bottom">
@@ -138,42 +248,163 @@
             <i class="ph ph-building-apartment"></i>
             <i class="ph ph-city"></i> -->
             <div class="info-service">
-              <h3 class="lang" data-en="Real Estate Brokerage" data-ar="الوساطة العقارية">Real Estate Brokerage</h3>
-              <i class="ph ph-check-fat"> <p class="lang" data-en="Expert representation for residential and commercial transactions." data-ar="تمثيل احترافي للمعاملات السكنية والتجارية.">Expert representation for residential and commercial transactions.</p></i>
-              <i class="ph ph-check-fat"><p class="lang" data-en="Premium property marketing and multi-platform listings." data-ar="تسويق عقاري متميز وإدراج متعدد المنصات.">Premium property marketing and multi-platform listings.</p></i>
-              <i class="ph ph-check-fat"><p class="lang" data-en="Strategic consultation for optimized buying and selling." data-ar="استشارات استراتيجية لتحسين عمليات الشراء والبيع.">Strategic consultation for optimized buying and selling.</p></i>
-              <i class="ph ph-check-fat"><p class="lang" data-en="Accurate market analysis and valuation reports." data-ar="تحليل دقيق للسوق وتقارير التقييم.">Accurate market analysis and valuation reports.</p></i>      
+              <h3
+                class="lang"
+                data-en="Real Estate Brokerage"
+                data-ar="الوساطة العقارية"
+              >
+                Real Estate Brokerage
+              </h3>
+              <i class="ph ph-check-fat">
+                <p
+                  class="lang"
+                  data-en="Expert representation for residential and commercial transactions."
+                  data-ar="تمثيل احترافي للمعاملات السكنية والتجارية."
+                >
+                  Expert representation for residential and commercial
+                  transactions.
+                </p></i
+              >
+              <i class="ph ph-check-fat"
+                ><p
+                  class="lang"
+                  data-en="Premium property marketing and multi-platform listings."
+                  data-ar="تسويق عقاري متميز وإدراج متعدد المنصات."
+                >
+                  Premium property marketing and multi-platform listings.
+                </p></i
+              >
+              <i class="ph ph-check-fat"
+                ><p
+                  class="lang"
+                  data-en="Strategic consultation for optimized buying and selling."
+                  data-ar="استشارات استراتيجية لتحسين عمليات الشراء والبيع."
+                >
+                  Strategic consultation for optimized buying and selling.
+                </p></i
+              >
+              <i class="ph ph-check-fat"
+                ><p
+                  class="lang"
+                  data-en="Accurate market analysis and valuation reports."
+                  data-ar="تحليل دقيق للسوق وتقارير التقييم."
+                >
+                  Accurate market analysis and valuation reports.
+                </p></i
+              >
             </div>
           </div>
           <div class="service-card">
             <i class="fas fa-user"></i>
-             <div class="info-service">
-              <h3 class="lang" data-en="Individual Client Services" data-ar="خدمات العملاء الأفراد">Individual Client Services</h3>
-              <i class="ph ph-check-fat"><p class="lang" data-en="Tailored advisory for individuals and families." data-ar="استشارات مخصصة للأفراد والعائلات.">Tailored advisory for individuals and families.</p></i>
-              <i class="ph ph-check-fat"><p class="lang" data-en="Relocation planning and personalized home buying support." data-ar="تخطيط الانتقال ودعم شخصي لشراء المنزل.">Relocation planning and personalized home buying support.</p></i>
-              <i class="ph ph-check-fat"><p class="lang" data-en="Exclusive listings and off-market opportunities." data-ar="عروض حصرية وفرص غير متاحة في السوق.">Exclusive listings and off-market opportunities.</p></i>
-              <i class="ph ph-check-fat"><p class="lang" data-en="Financing, mortgage, and legal process assistance." data-ar="مساعدة في التمويل والرهن العقاري والإجراءات القانونية.">Financing, mortgage, and legal process assistance.</p></i>         
-            </div>         
+            <div class="info-service">
+              <h3
+                class="lang"
+                data-en="Individual Client Services"
+                data-ar="خدمات العملاء الأفراد"
+              >
+                Individual Client Services
+              </h3>
+              <i class="ph ph-check-fat"
+                ><p
+                  class="lang"
+                  data-en="Tailored advisory for individuals and families."
+                  data-ar="استشارات مخصصة للأفراد والعائلات."
+                >
+                  Tailored advisory for individuals and families.
+                </p></i
+              >
+              <i class="ph ph-check-fat"
+                ><p
+                  class="lang"
+                  data-en="Relocation planning and personalized home buying support."
+                  data-ar="تخطيط الانتقال ودعم شخصي لشراء المنزل."
+                >
+                  Relocation planning and personalized home buying support.
+                </p></i
+              >
+              <i class="ph ph-check-fat"
+                ><p
+                  class="lang"
+                  data-en="Exclusive listings and off-market opportunities."
+                  data-ar="عروض حصرية وفرص غير متاحة في السوق."
+                >
+                  Exclusive listings and off-market opportunities.
+                </p></i
+              >
+              <i class="ph ph-check-fat"
+                ><p
+                  class="lang"
+                  data-en="Financing, mortgage, and legal process assistance."
+                  data-ar="مساعدة في التمويل والرهن العقاري والإجراءات القانونية."
+                >
+                  Financing, mortgage, and legal process assistance.
+                </p></i
+              >
+            </div>
           </div>
           <div class="service-card">
             <i class="fas fa-handshake"></i>
             <div class="info-service">
-              <h3 class="lang" data-en="Developer Partnerships" data-ar="شراكات المطورين">Developer Partnerships</h3>
-              <i class="ph ph-check-fat"><p class="lang" data-en="Comprehensive sales and marketing for developments." data-ar="مبيعات وتسويق شاملة للمشاريع.">Comprehensive sales and marketing for developments.</p></i>
-              <i class="ph ph-check-fat"><p class="lang" data-en="Pre-launch strategy, pricing, and positioning guidance." data-ar="استراتيجية ما قبل الإطلاق، التسعير، وإرشادات التموقع."> Pre-launch strategy, pricing, and positioning guidance.</p></i>
-              <i class="ph ph-check-fat"><p class="lang" data-en="Bulk sales coordination with investors and institutions." data-ar="تنسيق مبيعات بالجملة مع المستثمرين والمؤسسات.">Bulk sales coordination with investors and institutions.</p></i>
-              <i class="ph ph-check-fat"><p class="lang" data-en="Branding, digital campaigns, and post-sale support." data-ar="العلامة التجارية، الحملات الرقمية، ودعم ما بعد البيع.">Branding, digital campaigns, and post-sale support.</p></i>
-            </div>  
+              <h3
+                class="lang"
+                data-en="Developer Partnerships"
+                data-ar="شراكات المطورين"
+              >
+                Developer Partnerships
+              </h3>
+              <i class="ph ph-check-fat"
+                ><p
+                  class="lang"
+                  data-en="Comprehensive sales and marketing for developments."
+                  data-ar="مبيعات وتسويق شاملة للمشاريع."
+                >
+                  Comprehensive sales and marketing for developments.
+                </p></i
+              >
+              <i class="ph ph-check-fat"
+                ><p
+                  class="lang"
+                  data-en="Pre-launch strategy, pricing, and positioning guidance."
+                  data-ar="استراتيجية ما قبل الإطلاق، التسعير، وإرشادات التموقع."
+                >
+                  Pre-launch strategy, pricing, and positioning guidance.
+                </p></i
+              >
+              <i class="ph ph-check-fat"
+                ><p
+                  class="lang"
+                  data-en="Bulk sales coordination with investors and institutions."
+                  data-ar="تنسيق مبيعات بالجملة مع المستثمرين والمؤسسات."
+                >
+                  Bulk sales coordination with investors and institutions.
+                </p></i
+              >
+              <i class="ph ph-check-fat"
+                ><p
+                  class="lang"
+                  data-en="Branding, digital campaigns, and post-sale support."
+                  data-ar="العلامة التجارية، الحملات الرقمية، ودعم ما بعد البيع."
+                >
+                  Branding, digital campaigns, and post-sale support.
+                </p></i
+              >
+            </div>
           </div>
         </div>
       </div>
       <div class="page3" id="page3">
-        <h1 class="lang" data-en="Property Listings" data-ar="قوائم العقارات">Property Listings</h1>
-          <p class="lang" 
-            data-en="Browse a refined collection of premium properties, thoughtfully selected to suit diverse needs. Begin your journey toward the perfect residence or investment with confidence." 
-            data-ar="تصفح مجموعة راقية من العقارات الفاخرة المختارة بعناية لتلبية الاحتياجات المتنوعة. ابدأ رحلتك نحو السكن المثالي أو الاستثمار بثقة.">
-            Browse a refined collection of premium properties, thoughtfully selected to suit diverse needs. Begin your journey toward the perfect residence or investment with confidence.
-          </p>
+        <h1 class="lang" data-en="Property Listings" data-ar="قوائم العقارات">
+          Property Listings
+        </h1>
+        <p
+          class="lang"
+          data-en="Browse a refined collection of premium properties, thoughtfully selected to suit diverse needs. Begin your journey toward the perfect residence or investment with confidence."
+          data-ar="تصفح مجموعة راقية من العقارات الفاخرة المختارة بعناية لتلبية الاحتياجات المتنوعة. ابدأ رحلتك نحو السكن المثالي أو الاستثمار بثقة."
+        >
+          Browse a refined collection of premium properties, thoughtfully
+          selected to suit diverse needs. Begin your journey toward the perfect
+          residence or investment with confidence.
+        </p>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <!-- <div class="swiper-slide">
@@ -191,230 +422,359 @@
           </div>
           <div class="swiper-pagination"></div>
         </div>
-        </div>
-      </div> 
-      <div class="page4" id="page4">
-        <div class="heading">
-          <h2 class="lang" data-en="Why Partner with Us" data-ar="لماذا تتعاون معنا">Why Partner with Us</h2>
-          <p class="lang" data-en="Experience the difference that sets us apart" data-ar="اختبر الفرق الذي يميزنا">
-            Experience the difference that sets us apart
-          </p>
-        </div>
-        <div class="diff-card-container">
-          <div class="diff-cards">
-            <img
-              src="visuals/realestatedevelopment.webp"
-              alt="Real Estate Development"
-            />
-            <div class="content">
-              <h2 class="lang" data-en="Real Estate Development" data-ar="تطوير العقارات">Real Estate Development</h2>
-              <p class="lang" data-en="Driven by a commitment to excellence and sustainability, our Development division specializes in delivering impactful real estate projects aligned with Saudi Vision 2030. We conduct in-depth market and feasibility analyses, apply advanced planning and design principles, and implement cutting-edge building technologies to create vibrant urban communities. Our developments are designed to meet evolving market demands while maximizing long-term value for investors and stakeholders." data-ar="بدافع الالتزام بالتميز والاستدامة، تتخصص إدارة التطوير لدينا في تنفيذ مشاريع عقارية مؤثرة تتماشى مع رؤية السعودية 2030. نجري تحليلات متعمقة للسوق والدراسات الجدوى، ونطبق مبادئ التخطيط والتصميم المتقدمة، ونستخدم تقنيات بناء حديثة لخلق مجتمعات حضرية نابضة بالحياة. تم تصميم مشاريعنا لتلبية الطلبات المتطورة في السوق مع تعظيم القيمة طويلة الأمد للمستثمرين وأصحاب المصلحة.">
-                Driven by a commitment to excellence and sustainability, our
-                Development division specializes in delivering impactful real
-                estate projects aligned with Saudi Vision 2030. We conduct
-                in-depth market and feasibility analyses, apply advanced
-                planning and design principles, and implement cutting-edge
-                building technologies to create vibrant urban communities. Our
-                developments are designed to meet evolving market demands while
-                maximizing long-term value for investors and stakeholders.
-              </p>
-            </div>
-          </div>
-          <div class="diff-cards redesign">
-            <div class="content">
-              <h2 class="lang" data-en="Property Management" data-ar="إدارة الممتلكات">Property Management</h2>
-              <p class="lang" data-en="Our Property Management division offers institutional-level service with a focus on value preservation, risk mitigation, and return optimization. We manage all facets of property operations, including financial control, lease compliance, vendor coordination, and maintenance planning. Through proactive management and a commitment to excellence, we help our clients achieve sustained operational and financial success." data-ar="تقدم إدارة إدارة الممتلكات لدينا خدمات على مستوى المؤسسات مع التركيز على الحفاظ على القيمة، وتقليل المخاطر، وتحسين العائد. ندير جميع جوانب عمليات الممتلكات، بما في ذلك التحكم المالي، والامتثال للعقود الإيجارية، وتنسيق الموردين، والتخطيط للصيانة. من خلال إدارة استباقية والتزام بالتميز، نساعد عملائنا على تحقيق نجاح تشغيلي ومالي مستدام.">
-                Our Property Management division offers institutional-level
-                service with a focus on value preservation, risk mitigation, and
-                return optimization. We manage all facets of property
-                operations, including financial control, lease compliance,
-                vendor coordination, and maintenance planning. Through proactive
-                management and a commitment to excellence, we help our clients
-                achieve sustained operational and financial success.
-              </p>
-            </div>
-            <img src="visuals/pjManagement.avif" alt="Property Management" />
-          </div>
-
-          <div class="diff-cards">
-            <img
-              src="visuals/RE_Marketing&Sales.webp"
-              alt="Real Estate Marketing & Sales"
-            />
-            <div class="content">
-              <h2 class="lang" data-en="Real Estate Marketing & Sales" data-ar="التسويق والمبيعات العقارية">Real Estate Marketing & Sales</h2>
-              <p class="lang" data-en="Our Marketing & Sales division is driven by performance and precision. We harness the power of digital tools, market analytics, and compelling brand storytelling to generate demand and convert interest into results. From social media engagement to targeted campaigns and lead nurturing, we build strategies that enhance visibility and accelerate absorption rates." data-ar="يقود قسم التسويق والمبيعات لدينا الأداء والدقة. نستخدم قوة الأدوات الرقمية، وتحليلات السوق، وسرد العلامة التجارية الجذاب لتوليد الطلب وتحويل الاهتمام إلى نتائج. من التفاعل عبر وسائل التواصل الاجتماعي إلى الحملات المستهدفة ورعاية العملاء المحتملين، نبني استراتيجيات تعزز الرؤية وتسارع معدلات الامتصاص.">
-                Our Marketing & Sales division is driven by performance and
-                precision. We harness the power of digital tools, market
-                analytics, and compelling brand storytelling to generate demand
-                and convert interest into results. From social media engagement
-                to targeted campaigns and lead nurturing, we build strategies
-                that enhance visibility and accelerate absorption rates.
-              </p>
-            </div>
-          </div>
-        </div>        
-      </div>
-      <div class="achievement-section">
-        <div class="achivement-content">
-          <h1 class="lang" data-en="Our Achievements" data-ar="إنجازاتنا">Our Achievements</h1>
-          <p class="lang" 
-            data-en="We take pride in our journey marked by excellence, trust, and remarkable milestones. From successful investments to satisfied clients, our track record speaks for itself." 
-            data-ar="نفخر برحلتنا التي تميزت بالتميز والثقة والإنجازات الرائعة. من الاستثمارات الناجحة إلى العملاء الراضين، فإن سجلنا الحافل يتحدث عنا.">
-            We take pride in our journey marked by excellence, trust, and remarkable milestones. From successful investments to satisfied clients, our track record speaks for itself.
-          </p>
-          <div class="card-grid"></div>
-        </div>
-      </div>
-      <div class="page5" id="page5">
-        <div class="top lang" data-en="Join Us" data-ar="انضم إلينا">
-          Join Us
-        </div>
-        <div class="bottom">
-          <div class="img-overlay">
-            <div class="overlay"></div>
-            <img src="visuals/B&S.avif" alt="Property Image" />
-          </div>
-          <div class="contact-form">
-            <h2 class="lang" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h2>
-
-            <form action="https://api.web3forms.com/submit" method="POST">
-              <input
-                type="hidden"
-                name="access_key"
-                value="4165d260-a83d-4239-b402-c955e6bda3f5"
-              />
-              <!-- FIX: Set recipient email -->
-              <input 
-                type="hidden" 
-                name="email" 
-                value="info@darelite.com"
-              />
-                <!-- Reply-To setup -->
-              <input 
-                type="hidden" 
-                name="replyto" 
-                value="email_address" 
-              />
-              
-              <input class="lang" data-en="Your Name" data-ar="اسمك" type="text" name="Name" placeholder="Your Name" autocomplete="off" required />
-              <input
-                type="email"
-                name="email_address" 
-                placeholder="Your Email ID"
-                autocomplete="off"
-                class="lang" 
-                data-en="Your Email ID" 
-                data-ar="البريد الإلكتروني الخاص بك"
-                required
-              />
-              <input
-                type="text"
-                name="mobileNumber"
-                placeholder="Your Mobile Number"
-                class="lang" 
-                data-en="Your Mobile Number" 
-                data-ar="رقم جوالك"
-                autocomplete="off"
-                maxlength="16"
-                required
-                oninput="this.value = this.value.replace(/[^0-9+ ]/g, '')"
-              />
-              <textarea name="Message" placeholder="Your Message" class="lang" data-en="Your Message" data-ar="رسالتك" autocomplete="off"></textarea>
-              <input
-               type="checkbox" 
-               name="botcheck" 
-               class="hidden" 
-               style="display: none;"
-               />
-              <button type="submit" class="lang" data-en="Send" data-ar="إرسال">Send</button>
-            </form>
-          </div>
-        </div>
-      </div>
-        <footer id="footer">
-          <div class="footer-content">
-            <div class="b1">
-              <h2 class="lang" data-en="about darelite" data-ar="عن دار إيليت">about darelite</h2>
-              <a href="#page2" class="lang" data-en="About us" data-ar="من نحن">about us</a>
-            </div>
-            <div class="b2">
-              <h2 class="lang" data-en="join us" data-ar="انضم إلينا">join us</h2>
-              <a href="#page5" class="lang" data-en="Contact us" data-ar="اتصل بنا">contact us</a>
-            </div>
-            <div class="b0">
-              <h2 class="lang" data-en="Address Details" data-ar="تفاصيل العنوان">Address Details</h2>
-              <p>
-                <span class="lang" data-en="Address :" data-ar="العنوان :">Address :</span>
-                <a href="https://www.google.com/maps?q=26.300484977017387,50.169451275418496" target="_blank">EKJB2682</a>
-              </p>
-              <p>
-                <span class="lang" data-en="Building No :" data-ar="رقم المبنى :">Building No :</span>
-                <a href="https://www.google.com/maps?q=26.300484977017387,50.169451275418496" target="_blank">2682</a>
-              </p>
-              <p>
-                <span class="lang" data-en="Street No :" data-ar="رقم الشارع :">Street No :</span>
-                <a href="https://www.google.com/maps?q=26.300484977017387,50.169451275418496" target="_blank">9B</a>
-              </p>
-              <p>
-                <span class="lang" data-en="District :" data-ar="الحي :">District :</span>
-                <a href="https://www.google.com/maps?q=26.300484977017387,50.169451275418496" target="_blank">
-                  <span class="lang" data-en="Al Olaya District" data-ar="حي العليا">Al Olaya District</span>
-                </a>
-              </p>
-              <p>
-                <span class="lang" data-en="Postal Code :" data-ar="الرمز البريدي :">Postal Code :</span>
-                <a href="https://www.google.com/maps?q=26.300484977017387,50.169451275418496" target="_blank">34448</a>
-              </p>
-              <p>
-                <span class="lang" data-en="City :" data-ar="المدينة :">City :</span>
-                <a href="https://www.google.com/maps?q=26.300484977017387,50.169451275418496" target="_blank">
-                  <span class="lang" data-en="Al Khobar, Kingdom of Saudi Arabia" data-ar="الخبر، المملكة العربية السعودية">
-                    Al Khobar,<br>Kingdom of Saudi Arabia
-                  </span>
-                </a>
-              </p>
-            </div>
-            <div class="map-container">
-              <h2 class="lang" data-en="Location" data-ar="الموقع على الخريطة">Location</h2>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3455.7133349404944!2d50.169451275418496!3d26.300484977017387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDE4JzAxLjgiTiA1MMKwMTAnMTkuMyJF!5e1!3m2!1sen!2ssa!4v1756113984668!5m2!1sen!2ssa"
-               width="100%" 
-               height="50%" 
-               style="border:none;border-radius:5px;" 
-               allowfullscreen="" 
-               loading="lazy" 
-               referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-            </div>
-          </div>
-          <div class="icons-container">
-            <div class="left">
-              <div class="logo">
-                <img src="visuals/DarElite_Logo_HighRes.png" alt="" />
-              </div>
-            </div>
-            <div class="right">
-              <div class="social-media">
-                <div class="links">
-                  <a href=""><i class="ph ph-x-logo"></i></a>
-                  <a href="https://wa.me/966597900000" target="_blank"><i class="ph ph-whatsapp-logo"></i></a>
-                  <a href=""><i class="ph ph-instagram-logo"></i></a>
-                  <a href=""><i class="ph ph-linkedin-logo"></i></a>
-                  <a href=""><i class="ph ph-youtube-logo"></i></a>
-                </div>
-                <h2 class="lang" data-en="Social Media" data-ar="وسائل التواصل الاجتماعي">social media</h2>
-              </div>
-              <div class="reserved">
-                <h2 class="lang" data-en="All rights reserved © DarElite Real Estate 2025" data-ar="جميع الحقوق محفوظة © دار إيليت للعقارات 2025">
-                  All rights reserved © DarElite Real Estate 2025
-                </h2>
-                <button class="lang" data-en="Privacy Policy" data-ar="سياسة الخصوصية">privacy policy</button>
-              </div>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
+    <div class="page4" id="page4">
+      <div class="heading">
+        <h2
+          class="lang"
+          data-en="Why Partner with Us"
+          data-ar="لماذا تتعاون معنا"
+        >
+          Why Partner with Us
+        </h2>
+        <p
+          class="lang"
+          data-en="Experience the difference that sets us apart"
+          data-ar="اختبر الفرق الذي يميزنا"
+        >
+          Experience the difference that sets us apart
+        </p>
+      </div>
+      <div class="diff-card-container">
+        <div class="diff-cards">
+          <img
+            src="visuals/realestatedevelopment.webp"
+            alt="Real Estate Development"
+          />
+          <div class="content">
+            <h2
+              class="lang"
+              data-en="Real Estate Development"
+              data-ar="تطوير العقارات"
+            >
+              Real Estate Development
+            </h2>
+            <p
+              class="lang"
+              data-en="Driven by a commitment to excellence and sustainability, our Development division specializes in delivering impactful real estate projects aligned with Saudi Vision 2030. We conduct in-depth market and feasibility analyses, apply advanced planning and design principles, and implement cutting-edge building technologies to create vibrant urban communities. Our developments are designed to meet evolving market demands while maximizing long-term value for investors and stakeholders."
+              data-ar="بدافع الالتزام بالتميز والاستدامة، تتخصص إدارة التطوير لدينا في تنفيذ مشاريع عقارية مؤثرة تتماشى مع رؤية السعودية 2030. نجري تحليلات متعمقة للسوق والدراسات الجدوى، ونطبق مبادئ التخطيط والتصميم المتقدمة، ونستخدم تقنيات بناء حديثة لخلق مجتمعات حضرية نابضة بالحياة. تم تصميم مشاريعنا لتلبية الطلبات المتطورة في السوق مع تعظيم القيمة طويلة الأمد للمستثمرين وأصحاب المصلحة."
+            >
+              Driven by a commitment to excellence and sustainability, our
+              Development division specializes in delivering impactful real
+              estate projects aligned with Saudi Vision 2030. We conduct
+              in-depth market and feasibility analyses, apply advanced planning
+              and design principles, and implement cutting-edge building
+              technologies to create vibrant urban communities. Our developments
+              are designed to meet evolving market demands while maximizing
+              long-term value for investors and stakeholders.
+            </p>
+          </div>
+        </div>
+        <div class="diff-cards redesign">
+          <div class="content">
+            <h2
+              class="lang"
+              data-en="Property Management"
+              data-ar="إدارة الممتلكات"
+            >
+              Property Management
+            </h2>
+            <p
+              class="lang"
+              data-en="Our Property Management division offers institutional-level service with a focus on value preservation, risk mitigation, and return optimization. We manage all facets of property operations, including financial control, lease compliance, vendor coordination, and maintenance planning. Through proactive management and a commitment to excellence, we help our clients achieve sustained operational and financial success."
+              data-ar="تقدم إدارة إدارة الممتلكات لدينا خدمات على مستوى المؤسسات مع التركيز على الحفاظ على القيمة، وتقليل المخاطر، وتحسين العائد. ندير جميع جوانب عمليات الممتلكات، بما في ذلك التحكم المالي، والامتثال للعقود الإيجارية، وتنسيق الموردين، والتخطيط للصيانة. من خلال إدارة استباقية والتزام بالتميز، نساعد عملائنا على تحقيق نجاح تشغيلي ومالي مستدام."
+            >
+              Our Property Management division offers institutional-level
+              service with a focus on value preservation, risk mitigation, and
+              return optimization. We manage all facets of property operations,
+              including financial control, lease compliance, vendor
+              coordination, and maintenance planning. Through proactive
+              management and a commitment to excellence, we help our clients
+              achieve sustained operational and financial success.
+            </p>
+          </div>
+          <img src="visuals/pjManagement.avif" alt="Property Management" />
+        </div>
+
+        <div class="diff-cards">
+          <img
+            src="visuals/RE_Marketing&Sales.webp"
+            alt="Real Estate Marketing & Sales"
+          />
+          <div class="content">
+            <h2
+              class="lang"
+              data-en="Real Estate Marketing & Sales"
+              data-ar="التسويق والمبيعات العقارية"
+            >
+              Real Estate Marketing & Sales
+            </h2>
+            <p
+              class="lang"
+              data-en="Our Marketing & Sales division is driven by performance and precision. We harness the power of digital tools, market analytics, and compelling brand storytelling to generate demand and convert interest into results. From social media engagement to targeted campaigns and lead nurturing, we build strategies that enhance visibility and accelerate absorption rates."
+              data-ar="يقود قسم التسويق والمبيعات لدينا الأداء والدقة. نستخدم قوة الأدوات الرقمية، وتحليلات السوق، وسرد العلامة التجارية الجذاب لتوليد الطلب وتحويل الاهتمام إلى نتائج. من التفاعل عبر وسائل التواصل الاجتماعي إلى الحملات المستهدفة ورعاية العملاء المحتملين، نبني استراتيجيات تعزز الرؤية وتسارع معدلات الامتصاص."
+            >
+              Our Marketing & Sales division is driven by performance and
+              precision. We harness the power of digital tools, market
+              analytics, and compelling brand storytelling to generate demand
+              and convert interest into results. From social media engagement to
+              targeted campaigns and lead nurturing, we build strategies that
+              enhance visibility and accelerate absorption rates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="achievement-section">
+      <div class="achivement-content">
+        <h1 class="lang" data-en="Our Achievements" data-ar="إنجازاتنا">
+          Our Achievements
+        </h1>
+        <p
+          class="lang"
+          data-en="We take pride in our journey marked by excellence, trust, and remarkable milestones. From successful investments to satisfied clients, our track record speaks for itself."
+          data-ar="نفخر برحلتنا التي تميزت بالتميز والثقة والإنجازات الرائعة. من الاستثمارات الناجحة إلى العملاء الراضين، فإن سجلنا الحافل يتحدث عنا."
+        >
+          We take pride in our journey marked by excellence, trust, and
+          remarkable milestones. From successful investments to satisfied
+          clients, our track record speaks for itself.
+        </p>
+        <div class="card-grid"></div>
+      </div>
+    </div>
+    <div class="page5" id="page5">
+      <div class="top lang" data-en="Join Us" data-ar="انضم إلينا">Join Us</div>
+      <div class="bottom">
+        <div class="img-overlay">
+          <div class="overlay"></div>
+          <img src="visuals/B&S.avif" alt="Property Image" />
+        </div>
+        <div class="contact-form">
+          <h2 class="lang" data-en="Contact Us" data-ar="اتصل بنا">
+            Contact Us
+          </h2>
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="4165d260-a83d-4239-b402-c955e6bda3f5"
+            />
+            <!-- FIX: Set recipient email -->
+            <input type="hidden" name="email" value="info@darelite.com" />
+            <!-- Reply-To setup -->
+            <input type="hidden" name="replyto" value="email_address" />
+
+            <input
+              class="lang"
+              data-en="Your Name"
+              data-ar="اسمك"
+              type="text"
+              name="Name"
+              placeholder="Your Name"
+              autocomplete="off"
+              required
+            />
+            <input
+              type="email"
+              name="email_address"
+              placeholder="Your Email ID"
+              autocomplete="off"
+              class="lang"
+              data-en="Your Email ID"
+              data-ar="البريد الإلكتروني الخاص بك"
+              required
+            />
+            <input
+              type="text"
+              name="mobileNumber"
+              placeholder="Your Mobile Number"
+              class="lang"
+              data-en="Your Mobile Number"
+              data-ar="رقم جوالك"
+              autocomplete="off"
+              maxlength="16"
+              required
+              oninput="this.value = this.value.replace(/[^0-9+ ]/g, '')"
+            />
+            <textarea
+              name="Message"
+              placeholder="Your Message"
+              class="lang"
+              data-en="Your Message"
+              data-ar="رسالتك"
+              autocomplete="off"
+            ></textarea>
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+            />
+            <button type="submit" class="lang" data-en="Send" data-ar="إرسال">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="footer-content">
+        <div class="b1">
+          <h2 class="lang" data-en="about darelite" data-ar="عن دار إيليت">
+            about darelite
+          </h2>
+          <a href="#page2" class="lang" data-en="About us" data-ar="من نحن"
+            >about us</a
+          >
+        </div>
+        <div class="b2">
+          <h2 class="lang" data-en="join us" data-ar="انضم إلينا">join us</h2>
+          <a href="#page5" class="lang" data-en="Contact us" data-ar="اتصل بنا"
+            >contact us</a
+          >
+        </div>
+        <div class="b0">
+          <h2 class="lang" data-en="Address Details" data-ar="تفاصيل العنوان">
+            Address Details
+          </h2>
+          <p>
+            <span class="lang" data-en="Address :" data-ar="العنوان :"
+              >Address :</span
+            >
+            <a
+              href="https://www.google.com/maps?q=26.300484977017387,50.169451275418496"
+              target="_blank"
+              >EKJB2682</a
+            >
+          </p>
+          <p>
+            <span class="lang" data-en="Building No :" data-ar="رقم المبنى :"
+              >Building No :</span
+            >
+            <a
+              href="https://www.google.com/maps?q=26.300484977017387,50.169451275418496"
+              target="_blank"
+              >2682</a
+            >
+          </p>
+          <p>
+            <span class="lang" data-en="Street No :" data-ar="رقم الشارع :"
+              >Street No :</span
+            >
+            <a
+              href="https://www.google.com/maps?q=26.300484977017387,50.169451275418496"
+              target="_blank"
+              >9B</a
+            >
+          </p>
+          <p>
+            <span class="lang" data-en="District :" data-ar="الحي :"
+              >District :</span
+            >
+            <a
+              href="https://www.google.com/maps?q=26.300484977017387,50.169451275418496"
+              target="_blank"
+            >
+              <span class="lang" data-en="Al Olaya District" data-ar="حي العليا"
+                >Al Olaya District</span
+              >
+            </a>
+          </p>
+          <p>
+            <span class="lang" data-en="Postal Code :" data-ar="الرمز البريدي :"
+              >Postal Code :</span
+            >
+            <a
+              href="https://www.google.com/maps?q=26.300484977017387,50.169451275418496"
+              target="_blank"
+              >34448</a
+            >
+          </p>
+          <p>
+            <span class="lang" data-en="City :" data-ar="المدينة :"
+              >City :</span
+            >
+            <a
+              href="https://www.google.com/maps?q=26.300484977017387,50.169451275418496"
+              target="_blank"
+            >
+              <span
+                class="lang"
+                data-en="Al Khobar, Kingdom of Saudi Arabia"
+                data-ar="الخبر، المملكة العربية السعودية"
+              >
+                Al Khobar,<br />Kingdom of Saudi Arabia
+              </span>
+            </a>
+          </p>
+        </div>
+        <div class="map-container">
+          <h2 class="lang" data-en="Location" data-ar="الموقع على الخريطة">
+            Location
+          </h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3455.7133349404944!2d50.169451275418496!3d26.300484977017387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDE4JzAxLjgiTiA1MMKwMTAnMTkuMyJF!5e1!3m2!1sen!2ssa!4v1756113984668!5m2!1sen!2ssa"
+            width="100%"
+            height="50%"
+            style="border: none; border-radius: 5px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+      <div class="icons-container">
+        <div class="left">
+          <div class="logo">
+            <img src="visuals/DarElite_Logo_HighRes.png" alt="" />
+          </div>
+        </div>
+        <div class="right">
+          <div class="social-media">
+            <div class="links">
+              <a href=""><i class="ph ph-x-logo"></i></a>
+              <a href="https://wa.me/966597900000" target="_blank"
+                ><i class="ph ph-whatsapp-logo"></i
+              ></a>
+              <a href="https://www.instagram.com/dareliteksa/" target="_blank"
+                ><i class="ph ph-instagram-logo"></i
+              ></a>
+              <a href="mailto:info@darelite.com" target="_blank"
+                ><i class="ph ph-envelope-simple"></i
+              ></a>
+              <!-- <a href=""><i class="ph ph-linkedin-logo"></i></a>
+                  <a href=""><i class="ph ph-youtube-logo"></i></a> -->
+            </div>
+            <h2
+              class="lang"
+              data-en="Social Media"
+              data-ar="وسائل التواصل الاجتماعي"
+            >
+              social media
+            </h2>
+          </div>
+          <div class="reserved">
+            <h2
+              class="lang"
+              data-en="All rights reserved © DarElite Real Estate 2025"
+              data-ar="جميع الحقوق محفوظة © دار إيليت للعقارات 2025"
+            >
+              All rights reserved © DarElite Real Estate 2025
+            </h2>
+            <a
+              href="/privacy_policy.html"
+              class="lang"
+              data-en="Privacy Policy"
+              data-ar="سياسة الخصوصية"
+              >Privacy Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <!-- Swiper JS -->
