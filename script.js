@@ -323,12 +323,19 @@ function makeCall() {
   const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
   const errorMessage = document.getElementById("call-error");
 
+  const lang = document.documentElement.lang || "en";
+
   if (isMobile) {
     errorMessage.style.display = "none";
     window.location.href = "tel:+966597900000";
   } else {
-    errorMessage.textContent =
-      "Calling is not supported on this device. Please use a mobile phone or try our WhatsApp or chat options available on the Website.";
+    if (lang === "ar") {
+      errorMessage.innerHTML =
+        "هذا الجهاز لا يدعم المكالمات. يمكنك التواصل معنا عبر الهاتف المحمول، من خلال موقعنا الإلكتروني، أو الاتصال بنا على الرقم <strong style='color: #1b1b32; font-size: 1.2em;' dir='ltr'>+966 59 790 0000</strong>.";
+    } else {
+      errorMessage.innerHTML =
+        "This device does not support calling. You may contact us via mobile, through our website, or by calling us on <strong style='color: #1b1b32; font-size: 1.2em;'>+966 59 790 0000</strong>.";
+    }
     errorMessage.style.display = "block";
   }
 }
