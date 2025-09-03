@@ -42,7 +42,7 @@ body {
   position: fixed;
   bottom: 28%;
   padding: 10px;
-  background-color: transparent;
+  background-color: #29b95e;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -53,26 +53,13 @@ body {
 
 .whatsappButton a {
   text-decoration: none;
-  color: #f6c955ec;
+  color: hsl(0, 0%, 98%);
   cursor: pointer;
 }
 
 .whatsappButton #fixed i {
   font-size: 45px;
   cursor: pointer;
-}
-
-.whatsappButton:hover a {
-  color: rgb(240, 240, 240);
-}
-
-.whatsappButton:hover #fixed i {
-  transform: scale(1.5);
-}
-
-.whatsappButton:hover {
-  background-color: #29b95e;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.8);
 }
 
 /* Tablets */
@@ -120,10 +107,97 @@ body {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  background: #f6c955ec url("visuals/lpheader.png") center/cover no-repeat;
+  /* background: #f6c955ec url("visuals/lpheader.png") center/cover no-repeat; */
   /* padding: 0 3%; */
   z-index: 20;
 }
+
+.bgSlider {
+  position: absolute;
+  /* or relative depending on your layout */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* adjust height as needed */
+  overflow: hidden;
+  z-index: -1;
+  /* behind your content */
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  animation: fadeAnimation 32s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.slide1 {
+  background-image: url('visuals/h1.jpeg');
+  animation-delay: 0s;
+}
+
+.slide2 {
+  background-image: url('visuals/h2.jpeg');
+  animation-delay: 4s;
+}
+
+.slide3 {
+  background-image: url('visuals/h3.png');
+  animation-delay: 8s;
+}
+
+.slide4 {
+  background-image: url('visuals/h4.png');
+  animation-delay: 12s;
+}
+
+.slide5 {
+  background-image: url('visuals/h5.jpeg');
+  animation-delay: 16s;
+}
+
+.slide6 {
+  background-image: url('visuals/h6.jpeg');
+  animation-delay: 20s;
+}
+
+.slide7 {
+  background-image: url('visuals/h7.jpeg');
+  animation-delay: 24s;
+}
+
+.slide8 {
+  background-image: url('visuals/h8.jpeg');
+  animation-delay: 28s;
+}
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  6.25% {
+    opacity: 1;
+  }
+
+  18.75% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 
 .page1 .overlay {
   position: absolute;
@@ -131,7 +205,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.95);
   z-index: 1;
 }
 
@@ -162,7 +236,7 @@ body {
 }
 
 .page1 nav {
-  width: 85%;
+  width: 60%;
   margin: 0 5%;
   display: flex;
   align-items: center;
@@ -1607,6 +1681,7 @@ body {
   border: none;
   border-bottom: hsla(44, 80%, 66%, 0.882) solid 3.5px;
   flex-shrink: 0;
+  margin-top: 1rem;
   /* prevent shrinking */
 }
 
@@ -1658,30 +1733,16 @@ body {
   opacity: 0.25;
 }
 
-.page5 .bottom .contact-form {
+.page5 .bottom form {
   width: 50%;
   min-height: 50vh;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
-  font-size: 3rem;
-  gap: 1rem;
-  box-sizing: border-box;
+  gap: 2rem;
 }
 
-.page5 .bottom .contact-form h2 {
-  margin-top: 1.25rem;
-  font-size: 2.5rem;
-  color: #dedede;
-}
-
-.page5 .bottom .contact-form form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.page5 .bottom .contact-form form button {
+.page5 .bottom form button {
   width: 60%;
   padding: 10px;
   margin-top: 1.5rem;
@@ -1694,19 +1755,19 @@ body {
   cursor: pointer;
 }
 
-.page5 .bottom .contact-form form button:hover {
+.page5 .bottom form button:hover {
   color: white;
   background-color: hsla(44, 80%, 66%, 0.882);
 }
 
-.page5 .bottom .contact-form input::placeholder,
-.page5 .bottom .contact-form textarea::placeholder {
+.page5 .bottom input::placeholder,
+.page5 .bottom textarea::placeholder {
   color: #dedede;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   opacity: 1;
 }
 
-.page5 .bottom .contact-form form input {
+.page5 .bottom form input {
   max-width: 95%;
   color: #dedede;
   padding: 8px 3px;
@@ -1717,13 +1778,13 @@ body {
   border-bottom: 2px solid #dedede;
 }
 
-.page5 .bottom .contact-form form input:focus {
+.page5 .bottom form input:focus {
   color: white;
   border-bottom: 3px solid hsla(44, 80%, 66%, 0.882);
   font-weight: 400;
 }
 
-.page5 .bottom .contact-form form textarea {
+.page5 .bottom form textarea {
   max-width: 95%;
   color: #dedede;
   height: 150px;
@@ -1735,7 +1796,7 @@ body {
   border: 2px solid #dedede;
 }
 
-.page5 .bottom .contact-form form textarea:focus {
+.page5 .bottom form textarea:focus {
   border: 3px solid hsla(44, 80%, 66%, 0.882);
   font-weight: 400;
 }
@@ -1749,51 +1810,45 @@ body {
   .page5 .top {
     font-size: 2.5rem;
     padding: 8px 30px;
+    margin-top: 1rem;
   }
 
-  .page5 .bottom .contact-form {
-    font-size: 2.5rem;
-    gap: 1rem;
+  .page5 .bottom form {
+    width: 50%;
+    min-height: 50vh;
+    gap: 1.8rem;
   }
 
-  .page5 .bottom .contact-form h2 {
-    margin-top: 2.4rem;
-    font-size: 2.2rem;
-  }
-
-  .page5 .bottom .contact-form form {
-    gap: 1.35rem;
-  }
-
-  .page5 .bottom .contact-form form button {
-    width: 70%;
-    padding: 8px;
+  .page5 .bottom form button {
+    width: 65%;
+    padding: 10px;
     margin-top: 1.5rem;
     font-size: 1.15rem;
   }
 
-  .page5 .bottom .contact-form input::placeholder,
-  .page5 .bottom .contact-form textarea::placeholder {
-    font-size: 1.4rem;
+  .page5 .bottom input::placeholder,
+  .page5 .bottom textarea::placeholder {
+    font-size: 1.65rem;
   }
 
-  .page5 .bottom .contact-form form input {
+  .page5 .bottom form input {
     max-width: 90%;
     padding: 6px 3px;
-    font-size: 1.4rem;
+    font-size: 1.65rem;
   }
 
-  .page5 .bottom .contact-form form input:focus {
+  .page5 .bottom form input:focus {
     color: white;
     border-bottom: 3px solid hsla(44, 80%, 66%, 0.882);
     font-weight: 400;
   }
 
-  .page5 .bottom .contact-form form textarea {
+  .page5 .bottom form textarea {
     max-width: 90%;
     height: 125px;
     padding: 6px 10px;
-    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
   }
 
 }
@@ -1806,8 +1861,9 @@ body {
   }
 
   .page5 .top {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.4rem;
+    margin: 0.5rem;
+    margin-bottom: 1.25rem;
     padding: 5px 25px;
   }
 
@@ -1833,44 +1889,34 @@ body {
     border-radius: 10px;
   }
 
-  .page5 .bottom .contact-form {
+  .page5 .bottom form {
     width: 100%;
-    min-height: 40vh;
-    font-size: 1rem;
-    gap: 0.8rem;
+    min-height: 50vh;
+    gap: 1rem;
   }
 
-  .page5 .bottom .contact-form h2 {
-    margin-top: 0.6rem;
-    font-size: 2rem;
-  }
-
-  .page5 .bottom .contact-form form {
-    gap: 0.8rem;
-  }
-
-  .page5 .bottom .contact-form form button {
+  .page5 .bottom form button {
     width: 60%;
-    padding: 8px;
-    margin-top: 0.8rem;
-    font-size: 1rem;
+    padding: 8.5px;
+    margin-top: 0.85rem;
+    font-size: 1.25rem;
   }
 
-  .page5 .bottom .contact-form input::placeholder,
-  .page5 .bottom .contact-form textarea::placeholder {
-    font-size: 1.24rem;
+  .page5 .bottom input::placeholder,
+  .page5 .bottom textarea::placeholder {
+    font-size: 1.5rem;
   }
 
-  .page5 .bottom .contact-form form input {
+  .page5 .bottom form input {
     max-width: 95%;
     padding: 6px 3.5px;
-    font-size: 1.28rem;
+    font-size: 1.25rem;
   }
 
-  .page5 .bottom .contact-form form textarea {
+  .page5 .bottom form textarea {
     height: 95px;
     padding: 8px 10px;
-    font-size: 1.25rem;
+    font-size: 1.45rem;
   }
 }
 
@@ -1881,9 +1927,10 @@ body {
   }
 
   .page5 .top {
-    font-size: 2rem;
+    font-size: 2.4rem;
     padding: 5px 20px;
-    margin-bottom: 0.85rem;
+    margin: 1rem;
+    margin-bottom: 1.8rem;
   }
 
   .page5 .bottom {
@@ -1907,40 +1954,34 @@ body {
     right: 0;
   }
 
-  .page5 .bottom .contact-form {
+  .page5 .bottom form {
     width: 100%;
-    gap: 0.5rem;
+    min-height: 50vh;
+    gap: 1.5rem;
+    margin-top: 3rem;
   }
 
-  .page5 .bottom .contact-form h2 {
-    margin-top: 0.5rem;
-    font-size: 1.8rem;
-  }
-
-  .page5 .bottom .contact-form form {
-    gap: 1rem;
-  }
-
-  .page5 .bottom .contact-form form button {
-    padding: 7.5px;
-    margin-top: 0.5rem;
-    font-size: 1rem;
-  }
-
-  .page5 .bottom .contact-form input::placeholder,
-  .page5 .bottom .contact-form textarea::placeholder {
+  .page5 .bottom form button {
+    width: 60%;
+    padding: 8px;
+    margin-top: 1rem;
     font-size: 1.25rem;
   }
 
-  .page5 .bottom .contact-form form input {
+  .page5 .bottom input::placeholder,
+  .page5 .bottom textarea::placeholder {
+    font-size: 1.5rem;
+  }
+
+  .page5 .bottom form input {
     padding: 5px;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
-  .page5 .bottom .contact-form form textarea {
+  .page5 .bottom form textarea {
     height: 100px;
     padding: 5px 10px;
-    font-size: 1.25rem;
+    font-size: 1.45rem;
   }
 }
 

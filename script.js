@@ -88,6 +88,8 @@ async function loadProperties(lang) {
   if (window.mySwiper) window.mySwiper.destroy(true, true);
 
   window.mySwiper = new Swiper(".mySwiper", {
+    touchStartPreventDefault: false, // disable preventDefault
+    passiveListeners: true, // allow passive
     spaceBetween: 30,
     allowTouchMove: false,
     loop: false,

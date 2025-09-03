@@ -47,6 +47,17 @@
         </a>
       </div>
       <div class="page1" id="page1">
+        <div class="bgSlider">
+          <div class="slide slide1"></div>
+          <div class="slide slide2"></div>
+          <div class="slide slide3"></div>
+          <div class="slide slide4"></div>
+          <div class="slide slide5"></div>
+          <div class="slide slide6"></div>
+          <div class="slide slide7"></div>
+          <div class="slide slide8"></div>
+        </div>
+        <!-- Overlay -->
         <div class="overlay"></div>
         <div class="page1-content">
           <header>
@@ -75,7 +86,7 @@
                   data-ar="تواصل معنا"
                   >Contact us</a
                 >
-                <button
+                <!-- <button
                   id="call-button"
                   onclick="showContactCard()"
                   class="lang"
@@ -83,7 +94,7 @@
                   data-ar="تحدث معنا"
                 >
                   Speak with Us
-                </button>
+                </button> -->
                 <a
                   href="https://darelite.zohobookings.com"
                   target="_blank"
@@ -95,10 +106,10 @@
               </nav>
             </div>
             <div class="right">
-              <button class="lang" data-en="EN" data-ar="العربية">EN</button>
+              <button class="lang" data-ar="EN" data-en="العربية">EN</button>
             </div>
           </header>
-          <div id="call-overlay" onclick="closeContactCard()"></div>
+          <!-- <div id="call-overlay" onclick="closeContactCard()"></div>
           <div id="contact-card">
             <h3
               class="lang"
@@ -107,7 +118,6 @@
             >
               Would you like to get in touch with us directly ?
             </h3>
-            <!-- Error Message -->
             <p
               id="call-error"
               style="
@@ -136,7 +146,7 @@
                 >Start a Chat</a
               >
             </div>
-          </div>
+          </div> -->
           <div class="container">
             <div
               class="content lang"
@@ -544,80 +554,76 @@
       </div>
     </div>
     <div class="page5" id="page5">
-      <div class="top lang" data-en="Join Us" data-ar="انضم إلينا">Join Us</div>
+      <div class="top lang" data-en="Contact Us" data-ar="اتصل بنا">
+        Contact Us
+      </div>
       <div class="bottom">
         <div class="img-overlay">
           <div class="overlay"></div>
           <img src="visuals/B&S.avif" alt="Property Image" />
         </div>
-        <div class="contact-form">
-          <h2 class="lang" data-en="Contact Us" data-ar="اتصل بنا">
-            Contact Us
-          </h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value="4165d260-a83d-4239-b402-c955e6bda3f5"
+          />
+          <!-- FIX: Set recipient email -->
+          <input type="hidden" name="email" value="info@darelite.com" />
+          <!-- Reply-To setup -->
+          <input type="hidden" name="replyto" value="email_address" />
 
-          <form action="https://api.web3forms.com/submit" method="POST">
-            <input
-              type="hidden"
-              name="access_key"
-              value="4165d260-a83d-4239-b402-c955e6bda3f5"
-            />
-            <!-- FIX: Set recipient email -->
-            <input type="hidden" name="email" value="info@darelite.com" />
-            <!-- Reply-To setup -->
-            <input type="hidden" name="replyto" value="email_address" />
-
-            <input
-              class="lang"
-              data-en="Your Name"
-              data-ar="اسمك"
-              type="text"
-              name="Name"
-              placeholder="Your Name"
-              autocomplete="off"
-              required
-            />
-            <input
-              type="email"
-              name="email_address"
-              inputmode="email"
-              placeholder="Your Email ID"
-              autocomplete="off"
-              class="lang"
-              data-en="Your Email ID"
-              data-ar="البريد الإلكتروني الخاص بك"
-              required
-            />
-            <input
-              type="text"
-              name="mobileNumber"
-              placeholder="Your Mobile Number"
-              class="lang"
-              data-en="Your Mobile Number"
-              data-ar="رقم جوالك"
-              autocomplete="off"
-              maxlength="16"
-              required
-              oninput="this.value = this.value.replace(/[^0-9+ ]/g, '')"
-            />
-            <textarea
-              name="Message"
-              placeholder="Your Message"
-              class="lang"
-              data-en="Your Message"
-              data-ar="رسالتك"
-              autocomplete="off"
-            ></textarea>
-            <input
-              type="checkbox"
-              name="botcheck"
-              class="hidden"
-              style="display: none"
-            />
-            <button type="submit" class="lang" data-en="Send" data-ar="إرسال">
-              Send
-            </button>
-          </form>
-        </div>
+          <input
+            class="lang"
+            data-en="Your Name"
+            data-ar="اسمك"
+            type="text"
+            name="Name"
+            placeholder="Your Name"
+            autocomplete="off"
+            required
+          />
+          <input
+            type="email"
+            name="email_address"
+            inputmode="email"
+            placeholder="Your Email ID"
+            autocomplete="off"
+            class="lang"
+            data-en="Your Email ID"
+            data-ar="البريد الإلكتروني الخاص بك"
+            required
+          />
+          <input
+            type="text"
+            name="mobileNumber"
+            placeholder="Your Mobile Number"
+            class="lang"
+            data-en="Your Mobile Number"
+            data-ar="رقم جوالك"
+            autocomplete="off"
+            maxlength="16"
+            required
+            oninput="this.value = this.value.replace(/[^0-9+ ]/g, '')"
+          />
+          <textarea
+            name="Message"
+            placeholder="Your Message"
+            class="lang"
+            data-en="Your Message"
+            data-ar="رسالتك"
+            autocomplete="off"
+          ></textarea>
+          <input
+            type="checkbox"
+            name="botcheck"
+            class="hidden"
+            style="display: none"
+          />
+          <button type="submit" class="lang" data-en="Send" data-ar="إرسال">
+            Send
+          </button>
+        </form>
       </div>
     </div>
     <footer id="footer">
@@ -629,13 +635,16 @@
           <a href="#page2" class="lang" data-en="About us" data-ar="من نحن"
             >about us</a
           >
-        </div>
-        <div class="b2">
-          <h2 class="lang" data-en="join us" data-ar="انضم إلينا">join us</h2>
           <a href="#page5" class="lang" data-en="Contact us" data-ar="اتصل بنا"
             >contact us</a
           >
         </div>
+        <!-- <div class="b2">
+          <h2 class="lang" data-en="join us" data-ar="انضم إلينا">join us</h2>
+          <a href="#page5" class="lang" data-en="Contact us" data-ar="اتصل بنا"
+            >contact us</a
+          >
+        </div> -->
         <div class="b0">
           <h2 class="lang" data-en="Address Details" data-ar="تفاصيل العنوان">
             Address Details
