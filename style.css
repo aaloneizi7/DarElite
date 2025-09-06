@@ -1291,8 +1291,8 @@ body {
   }
 }
 
-.achievement-section {
-  background-color: #fffaed;
+.project-section {
+  background-color: rgba(240, 225, 150, 0.35);
   width: 100%;
   min-height: 60vh;
   padding: 5vh 3%;
@@ -1302,14 +1302,190 @@ body {
   position: relative;
 }
 
-.achievement-section .achivement-content h1 {
-  color: hsla(44, 80%, 66%, 0.882);
+.project-section .project-content h1 {
+  color: rgba(238, 201, 99, 0.882);
+  font-size: 2.8rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.project-section .project-content p {
+  width: 60%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 3rem;
+  margin: 0 auto;
+  color: #1b1b32;
+  text-align: center;
+}
+
+/* ✅ Project list container */
+.project-section .projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 20px 0;
+}
+
+
+/* ✅ Each card+button wrapper */
+.project-section .project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(43, 100%, 94.5%);
+  border: 1px solid rgba(238, 201, 99, 0.15);
+  box-shadow: 0 4px 8px rgba(238, 201, 99, 0.15);
+  gap: 2.5rem;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+/* ✅ Card style */
+.project-section .card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* ✅ Overlay inside card */
+.project-section .overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+  transition: all ease 0.5s;
+}
+
+/* ✅ Logo over the card */
+.project-section .card-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 160px;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.project-section .card:hover .card-logo {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* ✅ Button below the card */
+.project-section .card-button {
+  background-color: #eec963e1;
+  color: #1b1b32;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.project-section .card-button:hover {
+  background-color: #1b1b32;
+  color: #eec963e1;
+}
+
+/* ✅ Tablets and smaller desktops (up to 1024px) */
+@media (max-width: 1024px) {
+  .project-section .project-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .project-section .project-content p {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+
+  .project-section .card-logo {
+    max-width: 140px;
+    width: 70%;
+  }
+
+  .project-section .card-button {
+    font-size: 0.95rem;
+    padding: 8px 20px;
+  }
+}
+
+/* ✅ Small tablets and large phones (up to 768px) */
+@media (max-width: 768px) {
+  .project-section .project-content h1 {
+    font-size: 2rem;
+  }
+
+  .project-section .project-content p {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .project-section .card-logo {
+    max-width: 130px;
+    width: 75%;
+  }
+
+  .project-section .card-button {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
+}
+
+/* ✅ Mobile phones (up to 480px) */
+@media (max-width: 480px) {
+  .project-section .project-content h1 {
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
+  }
+
+  .project-section .project-content p {
+    width: 95%;
+    font-size: 0.95rem;
+    padding-bottom: 2rem;
+  }
+
+  .project-section .card-logo {
+    max-width: 120px;
+    width: 80%;
+  }
+
+  .project-section .card-button {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+  }
+}
+
+
+.achievement-section {
+  background-color: hsl(43, 100%, 94.5%);
+  width: 100%;
+  min-height: 60vh;
+  padding: 5vh 3%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.achievement-section .achievement-content h1 {
+  color: #eec963e1;
   text-align: center;
   font-size: 2.8rem;
   padding-bottom: 1.5rem;
 }
 
-.achievement-section .achivement-content p {
+.achievement-section .achievement-content p {
   width: 60%;
   font-size: 1.2rem;
   font-weight: 500;
@@ -1323,7 +1499,6 @@ body {
 .achievement-section .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  /* 4 per row at full width */
   gap: 16px;
   padding: 20px 0;
 }
@@ -1335,7 +1510,7 @@ body {
   aspect-ratio: 4 / 3;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
 }
 
 .card:hover .card-logo {
@@ -1369,11 +1544,11 @@ body {
     padding: 5vh 3%;
   }
 
-  .achievement-section .achivement-content h1 {
+  .achievement-section .achievement-content h1 {
     font-size: 2.8rem;
   }
 
-  .achievement-section .achivement-content p {
+  .achievement-section .achievement-content p {
     font-size: 1.2rem;
     width: 60%;
   }
@@ -1389,11 +1564,11 @@ body {
     padding: 4vh 4%;
   }
 
-  .achievement-section .achivement-content h1 {
+  .achievement-section .achievement-content h1 {
     font-size: 2.3rem;
   }
 
-  .achievement-section .achivement-content p {
+  .achievement-section .achievement-content p {
     font-size: 1.1rem;
     width: 75%;
   }
@@ -1413,11 +1588,11 @@ body {
     padding: 3vh 5%;
   }
 
-  .achievement-section .achivement-content h1 {
+  .achievement-section .achievement-content h1 {
     font-size: 2rem;
   }
 
-  .achievement-section .achivement-content p {
+  .achievement-section .achievement-content p {
     font-size: 1rem;
     width: 90%;
   }
@@ -1437,12 +1612,12 @@ body {
     padding: 2.5vh 5%;
   }
 
-  .achievement-section .achivement-content h1 {
+  .achievement-section .achievement-content h1 {
     font-size: 1.6rem;
     padding-bottom: 1rem;
   }
 
-  .achievement-section .achivement-content p {
+  .achievement-section .achievement-content p {
     font-size: 0.95rem;
     width: 95%;
     padding-bottom: 2rem;

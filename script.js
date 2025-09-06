@@ -10,6 +10,7 @@ let currentLang = localStorage.getItem("lang") || "en";
 document.addEventListener("DOMContentLoaded", () => {
   initializeLanguageSwitcher();
   loadProperties(currentLang);
+  loadProjects();
   loadAchievements();
 });
 
@@ -206,6 +207,55 @@ async function loadAchievements() {
   });
 }
 
+async function loadProjects() {
+  const { data, error } = await supabaseClient
+    .from("Project_Data")
+    .select("*")
+    .order("created_at", { ascending: false });
+
+  const section = document.querySelector(".project-section");
+  const wrapper = section?.querySelector(".projects-list");
+
+  if (error || !data || data.length === 0 || !wrapper) {
+    section?.style.setProperty("display", "none");
+    return;
+  }
+
+  wrapper.innerHTML = "";
+
+  const lang = document.documentElement.lang || "en";
+
+  data.forEach((item) => {
+    const projectContainer = document.createElement("div");
+    projectContainer.className = "project-item";
+
+    const card = document.createElement("div");
+    card.className = "card";
+    card.style.backgroundImage = `url('${item.Card_BackgroundImage_url}')`;
+
+    card.innerHTML = `
+      <div class="overlay" style="background: ${item.Overlay_Color};"></div>
+      <img src="${item.Logo_Over_Card_url}" alt="Logo" class="card-logo">
+      <div class="card-content">
+        <h3 class="card-title">${item.Title || ""}</h3>
+        <p class="card-description">${item.Description || ""}</p>
+      </div>
+    `;
+
+    const button = document.createElement("button");
+    button.className = "card-button lang";
+    button.setAttribute("data-en", "View Details");
+    button.setAttribute("data-ar", "عرض التفاصيل");
+    button.textContent = lang === "ar" ? "عرض التفاصيل" : "View Details";
+    button.onclick = () => window.open(item.PDF_File_url, "_blank");
+
+    projectContainer.appendChild(card);
+    projectContainer.appendChild(button);
+
+    wrapper.appendChild(projectContainer);
+  });
+}
+
 // 🚀 Scroll functionality
 function decodeUrlSegment(segment) {
   return decodeURIComponent(segment).replace(/-/g, " ").toLowerCase();
@@ -304,40 +354,40 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 //Call Us
 // Show the contact card
-function showContactCard() {
-  document.getElementById("call-overlay").style.display = "block";
-  document.getElementById("contact-card").style.display = "flex";
-}
+// function showContactCard() {
+//   document.getElementById("call-overlay").style.display = "block";
+//   document.getElementById("contact-card").style.display = "flex";
+// }
 
 // Close the contact card
-function closeContactCard() {
-  document.getElementById("call-overlay").style.display = "none";
-  document.getElementById("contact-card").style.display = "none";
+// function closeContactCard() {
+//   document.getElementById("call-overlay").style.display = "none";
+//   document.getElementById("contact-card").style.display = "none";
 
-  // Clear error if visible
-  const errorMessage = document.getElementById("call-error");
-  errorMessage.style.display = "none";
-  errorMessage.textContent = "";
-}
+//   // Clear error if visible
+//   const errorMessage = document.getElementById("call-error");
+//   errorMessage.style.display = "none";
+//   errorMessage.textContent = "";
+// }
 
 // Attempt to make the call
-function makeCall() {
-  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  const errorMessage = document.getElementById("call-error");
+// function makeCall() {
+//   const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+//   const errorMessage = document.getElementById("call-error");
 
-  const lang = document.documentElement.lang || "en";
+//   const lang = document.documentElement.lang || "en";
 
-  if (isMobile) {
-    errorMessage.style.display = "none";
-    window.location.href = "tel:+966597900000";
-  } else {
-    if (lang === "ar") {
-      errorMessage.innerHTML =
-        "هذا الجهاز لا يدعم المكالمات. يمكنك التواصل معنا عبر الهاتف المحمول، من خلال موقعنا الإلكتروني، أو الاتصال بنا على الرقم <strong style='color: #1b1b32; font-size: 1.2em;' dir='ltr'>+966 59 790 0000</strong>.";
-    } else {
-      errorMessage.innerHTML =
-        "This device does not support calling. You may contact us via mobile, through our website, or by calling us on <strong style='color: #1b1b32; font-size: 1.2em;'>+966 59 790 0000</strong>.";
-    }
-    errorMessage.style.display = "block";
-  }
-}
+//   if (isMobile) {
+//     errorMessage.style.display = "none";
+//     window.location.href = "tel:+966597900000";
+//   } else {
+//     if (lang === "ar") {
+//       errorMessage.innerHTML =
+//         "هذا الجهاز لا يدعم المكالمات. يمكنك التواصل معنا عبر الهاتف المحمول، من خلال موقعنا الإلكتروني، أو الاتصال بنا على الرقم <strong style='color: #1b1b32; font-size: 1.2em;' dir='ltr'>+966 59 790 0000</strong>.";
+//     } else {
+//       errorMessage.innerHTML =
+//         "This device does not support calling. You may contact us via mobile, through our website, or by calling us on <strong style='color: #1b1b32; font-size: 1.2em;'>+966 59 790 0000</strong>.";
+//     }
+//     errorMessage.style.display = "block";
+//   }
+// }
