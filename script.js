@@ -147,7 +147,7 @@ function initializeLanguageSwitcher() {
 
     updateStaticLangContent(currentLang);
     loadProperties(currentLang);
-
+    loadProjects();
     setWhatsappButtonPosition();
   });
 }
@@ -229,6 +229,7 @@ async function loadProjects() {
     const projectContainer = document.createElement("div");
     projectContainer.className = "project-item";
 
+    // Create the card
     const card = document.createElement("div");
     card.className = "card";
     card.style.backgroundImage = `url('${item.Card_BackgroundImage_url}')`;
@@ -236,11 +237,16 @@ async function loadProjects() {
     card.innerHTML = `
       <div class="overlay" style="background: ${item.Overlay_Color};"></div>
       <img src="${item.Logo_Over_Card_url}" alt="Logo" class="card-logo">
-      <div class="card-content">
-        <h3 class="card-title">${item.Title || ""}</h3>
-        <p class="card-description">${item.Description || ""}</p>
-      </div>
     `;
+
+    const titleText = item[`Project_Title_${lang}`] || "";
+    const title = document.createElement("h3");
+    title.className = "card-title";
+    title.style.cursor = "pointer";
+    title.textContent = titleText;
+    title.addEventListener("click", () => {
+      window.open(item.PDF_File_url, "_blank");
+    });
 
     const button = document.createElement("button");
     button.className = "card-button lang";
@@ -250,6 +256,7 @@ async function loadProjects() {
     button.onclick = () => window.open(item.PDF_File_url, "_blank");
 
     projectContainer.appendChild(card);
+    projectContainer.appendChild(title);
     projectContainer.appendChild(button);
 
     wrapper.appendChild(projectContainer);
