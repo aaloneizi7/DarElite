@@ -1327,19 +1327,19 @@ body {
 }
 
 .project-section .project-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   background-color: hsl(43, 100%, 94.5%);
   border: 1px solid rgba(238, 201, 99, 0.15);
   box-shadow: 0 4px 8px rgba(238, 201, 99, 0.15);
-  gap: 2rem;
   padding: 10px;
   border-radius: 10px;
 }
 
 .project-section .card {
-  position: relative;
   background-size: cover;
   background-position: center;
   aspect-ratio: 4 / 3;
@@ -1372,11 +1372,11 @@ body {
 }
 
 .project-section .card-title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
   color: #1b1b32;
   text-align: center;
-  margin-top: 0.5rem;
+  margin: 2rem;
   text-shadow: 2px 4px 10px rgba(27, 27, 50, 0.35);
 }
 
