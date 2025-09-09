@@ -362,19 +362,20 @@ body {
 
   .page1 .left .logo img {
     width: 120px;
-    width: 120px;
+    height: 120px;
   }
 
   .page1 .right button {
-    padding-top: 75%;
+    margin-top: 85%;
     font-size: 1.2rem;
   }
 
   .page1 nav {
     flex-direction: column;
     width: 100%;
+    margin: 0;
     font-size: 1rem;
-    margin-left: 25px;
+    padding: 1rem 0;
     align-items: flex-start;
     gap: 0.5rem;
   }
@@ -390,10 +391,9 @@ body {
   .page1 .content {
     position: absolute;
     font-weight: 400;
-    padding: 1rem;
-    margin-top: 0;
+    padding: 0 1.65rem;
     line-height: 1.8rem;
-    width: 90vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -414,6 +414,7 @@ body {
   .page1 .right button {
     border: solid transparent 5px;
     font-size: 1rem;
+    margin-top: 90%;
   }
 
   .page1 nav a {
@@ -425,7 +426,7 @@ body {
     font-weight: 500;
     line-height: 1.5rem;
     width: 100%;
-    padding: 0 2.5rem;
+    padding: 0 1rem;
     margin-bottom: 3rem;
   }
 }
