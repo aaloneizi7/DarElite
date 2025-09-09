@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadProperties(currentLang);
   loadProjects();
   loadAchievements();
+  setWhatsappButtonPosition();
 });
 
 window.addEventListener("load", () => {
@@ -51,7 +52,7 @@ async function loadProperties(lang) {
     slide.classList.add("swiper-slide");
     slide.innerHTML = `
       <div class="profile">
-        <img src="${item.image_url || ""}" alt="${
+        <img loading="lazy" src="${item.image_url || ""}" alt="${
       item[`property_name_${lang}`] || ""
     }" />
       </div>
@@ -201,7 +202,7 @@ async function loadAchievements() {
     card.style.backgroundImage = `url('${item.Card_BackgroundImage_url}')`;
     card.innerHTML = `
       <div class="overlay" style="background: ${item.Overlay_Color};"></div>
-      <img src="${item.Logo_Over_Card_url}" alt="Logo" class="card-logo">
+      <img loading="lazy" src="${item.Logo_Over_Card_url}" alt="Logo" class="card-logo">
     `;
     wrapper.appendChild(card);
   });
@@ -235,7 +236,7 @@ async function loadProjects() {
 
     card.innerHTML = `
       <div class="overlay" style="background: ${item.Overlay_Color};"></div>
-      <img src="${item.Logo_Over_Card_url}" alt="Logo" class="card-logo">
+      <img loading="lazy" src="${item.Logo_Over_Card_url}" alt="Logo" class="card-logo">
     `;
 
     const titleText = item[`Project_Title_${lang}`] || "";
@@ -344,19 +345,18 @@ function setupCardAnimations() {
   cards.forEach((card) => observer.observe(card));
 }
 // Adjust Whatsapp Button Position According to Lang
-window.addEventListener("DOMContentLoaded", (event) => {
-  const lang = document.documentElement.lang || "en";
-
+function setWhatsappButtonPosition() {
+  const lang = document.documentElement.lang || "en"; // Default to "en" if not set
   const whatsappButton = document.querySelector(".whatsappButton");
 
   if (lang === "ar") {
-    whatsappButton.style.left = "1.5%";
+    whatsappButton.style.left = "20px";
     whatsappButton.style.right = "auto";
   } else {
-    whatsappButton.style.right = "1.5%";
+    whatsappButton.style.right = "20px";
     whatsappButton.style.left = "auto";
   }
-});
+}
 
 //Call Us
 // Show the contact card
