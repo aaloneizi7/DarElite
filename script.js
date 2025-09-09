@@ -229,7 +229,6 @@ async function loadProjects() {
     const projectContainer = document.createElement("div");
     projectContainer.className = "project-item";
 
-    // Create the card
     const card = document.createElement("div");
     card.className = "card";
     card.style.backgroundImage = `url('${item.Card_BackgroundImage_url}')`;
