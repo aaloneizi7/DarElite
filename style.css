@@ -348,6 +348,7 @@ body {
   }
 
   .page1 header {
+    padding: 10px 0%;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
@@ -365,9 +366,18 @@ body {
     height: 120px;
   }
 
-  .page1 .right button {
-    margin-top: 85%;
-    font-size: 1.2rem;
+  .page1 .right {
+    padding: 10px 3%;
+  }
+
+  html[lang="ar"] .page1 .right button {
+    margin-top: 80%;
+
+  }
+
+  html[lang="en"] .page1 .right button {
+    margin-top: 50%;
+    font-size: 1.25rem;
   }
 
   .page1 nav {
@@ -375,7 +385,7 @@ body {
     width: 100%;
     margin: 0;
     font-size: 1rem;
-    padding: 1rem 0;
+    padding: 10px 5%;
     align-items: flex-start;
     gap: 0.5rem;
   }
@@ -411,10 +421,14 @@ body {
     height: 90px;
   }
 
-  .page1 .right button {
-    border: solid transparent 5px;
+  html[lang="ar"] .page1 .right button {
+    margin-top: 85%;
+
+  }
+
+  html[lang="en"] .page1 .right button {
+    margin-top: 65%;
     font-size: 1rem;
-    margin-top: 90%;
   }
 
   .page1 nav a {
