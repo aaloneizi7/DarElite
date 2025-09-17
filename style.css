@@ -1846,28 +1846,27 @@ body {
   font-weight: 500;
 }
 
-.page5 .bottom form .call-us i.ph {
+.page5 .bottom form .call-us a i.ph {
   font-size: 1.8rem;
   color: hsla(44, 80%, 66%);
   background-color: #1b1b32;
   border: solid 2px hsla(44, 80%, 66%);
   border-radius: 50%;
   padding: 5px;
-  transition: all ease 0.5s;
-}
-
-.page5 .bottom form .call-us:hover i.ph {
-  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .page5 .bottom form .call-us a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
+  margin-top: 3px;
+  transition: all ease 0.5s;
 }
 
 .page5 .bottom form .call-us a:hover {
   color: hsla(44, 80%, 66%, 0.882);
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {
@@ -1972,6 +1971,7 @@ body {
   .page5 .bottom form .call-us {
     gap: 8px;
     font-size: 1rem;
+    margin-bottom: 10px;
   }
 
   .page5 .bottom form .call-us i.ph {
@@ -2017,12 +2017,14 @@ body {
   }
 
   .page5 .bottom form input {
+    max-width: 100%;
     padding: 5px 2px;
     font-size: 1rem;
     border-bottom: 2px solid #dedede;
   }
 
   .page5 .bottom form textarea {
+    max-width: 100%;
     height: 95px;
     padding: 4px 5px;
     font-size: 1rem;
